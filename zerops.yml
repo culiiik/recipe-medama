@@ -11,9 +11,10 @@ zerops:
         - unzip -q medama*
         - mv -f medama_linux_amd64 /mnt/sharedstorage0/
         - chmod +x /mnt/sharedstorage0/medama_linux_amd64
+        - chmod +x run.sh
 
       ports:
         - port: 8080
           httpSupport: true
   
-      start: /mnt/sharedstorage0/medama_linux_amd64 start
+      start: /var/www/run.sh
