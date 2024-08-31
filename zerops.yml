@@ -5,7 +5,7 @@ zerops:
     run:
       os: ubuntu
       base:  go@1
-      initCommands:
+      prepareCommands:
         - cd /var/www/
         - wget https://github.com/medama-io/medama/releases/download/v0.4.4/medama-v0.4.4-linux-amd64.zip
         - unzip -q medama*
