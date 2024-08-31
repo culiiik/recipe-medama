@@ -7,9 +7,8 @@ zerops:
       base:  go@1
       prepareCommands:
         - sudo wget -P /var/www/ https://github.com/medama-io/medama/releases/download/v0.4.4/medama-v0.4.4-linux-amd64.zip
-        - yes | sudo unzip -q /var/www/medama-v0.4.4-linux-amd64.zip
       initCommands:
-        - sudo ls -la /var/www/
+        - yes | sudo unzip -q /var/www/medama-v0.4.4-linux-amd64.zip
         - sudo chmod +x /var/www/run.sh
 
       ports:
