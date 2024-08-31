@@ -6,12 +6,12 @@ zerops:
       os: ubuntu
       base:  go@1
       prepareCommands:
-        - wget -P /var/www/ https://github.com/medama-io/medama/releases/download/v0.4.4/medama-v0.4.4-linux-amd64.zip
-        - unzip -q /var/www/medama-v0.4.4-linux-amd64.zip
-        - chmod +x /var/www/run.sh
-        
+        - sudo wget -P /var/www/ https://github.com/medama-io/medama/releases/download/v0.4.4/medama-v0.4.4-linux-amd64.zip
+        - sudo unzip -q /var/www/medama-v0.4.4-linux-amd64.zip
+        - sudo chmod +x /var/www/run.sh
+
       ports:
         - port: 8080
           httpSupport: true
   
-      start: /var/www/run.sh
+      start: sudo /var/www/run.sh
