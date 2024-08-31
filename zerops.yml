@@ -10,7 +10,6 @@ zerops:
       initCommands:
         - yes | sudo unzip -q /var/www/medama-v0.4.4-linux-amd64.zip
         - sudo chmod +x /var/www/run.sh
-
       ports:
         - port: 8080
           httpSupport: true
