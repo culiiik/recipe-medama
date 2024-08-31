@@ -8,8 +8,8 @@ zerops:
       prepareCommands:
         - cd /var/www/
         - wget https://github.com/medama-io/medama/releases/download/v0.4.4/medama-v0.4.4-linux-amd64.zip
-        - unzip -q medama*
-        - chmod +x run.sh
+        - unzip -q /var/www/medama*
+        - chmod +x /var/www/run.sh
       ports:
         - port: 8080
           httpSupport: true
