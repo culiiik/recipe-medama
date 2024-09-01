@@ -3,7 +3,7 @@ project:
 services:
   - hostname: sharedstorage0
     type: shared-storage
-    mode: HA
+    mode: NON_HA
     priority: 10
   
   - hostname: app
