@@ -15,7 +15,7 @@ zerops:
         - port: 8080
           httpSupport: true
   
-      start: sudo /var/www/medama_linux_amd64 start
+      start: sudo /var/www/medama_linux_amd64 start -env
 
       envVariables:
         APP_DATABASE_HOST: '/mnt/sharedstorage0/me_meta.db'
