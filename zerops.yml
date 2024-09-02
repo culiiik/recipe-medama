@@ -17,7 +17,7 @@ zerops:
         - port: 8080
           httpSupport: true
   
-      start: sudo /var/www/run.sh
+      start: sleep 99999999 #sudo /var/www/run.sh
 
       envVariables:
         APP_DATABASE_HOST: '/mnt/sharedstorage0/me_meta.db'
