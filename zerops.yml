@@ -9,17 +9,12 @@ zerops:
         - sudo wget -P /var/www/ https://github.com/medama-io/medama/releases/download/v0.4.4/medama-v0.4.4-linux-amd64.zip
       initCommands:
         - yes | sudo unzip -q /var/www/medama-v0.4.4-linux-amd64.zip
-        - sudo chown zerops:zerops /var/www/medama_linux_amd64
+        #- sudo chown zerops:zerops /var/www/medama_linux_amd64
         - sudo chmod +x /var/www/medama_linux_amd64
-        - sudo chmod +x /var/www/run.sh
+        #- sudo chmod +x /var/www/run.sh
 
       ports:
         - port: 8080
           httpSupport: true
   
-      start: sleep 99999999 #sudo /var/www/run.sh
-
-      envVariables:
-        APP_DATABASE_HOST: '/mnt/sharedstorage0/me_meta.db'
-        ANALYTICS_DATABASE_HOST: '/mnt/sharedstorage0/me_analytics.db'
-        LEVEL: 'debug'
+      start: sudo /var/www/medama_linux_amd64 start -analyticsdb /mnt/sharedstorage0/me_analytics.db -appdb /mnt/sharedstorage0/me_meta.db
