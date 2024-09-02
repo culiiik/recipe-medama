@@ -3,13 +3,13 @@ project:
 services:
   - hostname: sharedstorage0
     type: shared-storage
-    mode: NON_HA
+    mode: HA
     priority: 10
   
   - hostname: app
     type: go@1
     enableSubdomainAccess: true
-    buildFromGit: "https://github.com/culiiik/recipe-medama"
+    buildFromGit: "https://github.com/zeropsio/recipe-medama"
     zeropsSetup: app
     priority: 1
     mount: 
