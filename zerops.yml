@@ -11,6 +11,7 @@ zerops:
         - yes | sudo unzip -q /var/www/medama-v0.4.4-linux-amd64.zip
         - sudo chown zerops:zerops /var/www/medama_linux_amd64
         - sudo chmod +x /var/www/medama_linux_amd64
+        - sudo chmod +x /var/www/run.sh
 
       ports:
         - port: 8080
