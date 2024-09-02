@@ -8,14 +8,14 @@ zerops:
       prepareCommands:
         - sudo wget -P /var/www/ https://github.com/medama-io/medama/releases/download/v0.4.4/medama-v0.4.4-linux-amd64.zip
       initCommands:
-        - sudo unzip -q /var/www/medama-v0.4.4-linux-amd64.zip
+        - yes | sudo unzip -q /var/www/medama-v0.4.4-linux-amd64.zip
         - sudo chmod +x /var/www/medama_linux_amd64
 
       ports:
         - port: 8080
           httpSupport: true
   
-      start: sudo /var/www/medama_linux_amd64 start -env
+      start: /var/www/medama_linux_amd64 start -env
 
       envVariables:
         APP_DATABASE_HOST: '/mnt/sharedstorage0/me_meta.db'
