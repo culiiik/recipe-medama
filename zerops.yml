@@ -22,3 +22,4 @@ zerops:
       envVariables:
         APP_DATABASE_HOST: '/mnt/sharedstorage0/me_meta.db'
         ANALYTICS_DATABASE_HOST: '/mnt/sharedstorage0/me_analytics.db'
+        LEVEL: 'debug'
